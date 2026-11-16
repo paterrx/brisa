@@ -6,14 +6,14 @@ The installer itself still verifies the Brisa setup file against GitHub's SHA-25
 
 ## Pinned, hash-checked bootstrap
 
-Review the [pinned script](https://github.com/paterrx/brisa/blob/ab6a626bc8c9390b3361dc335a8508a24f3b1f23/scripts/install.ps1), then paste this block into PowerShell on Windows x64. It downloads that exact revision, checks its SHA-256, runs it in Windows PowerShell, and deletes the temporary script afterward. The pinned script still selects the latest published Brisa release.
+Review the [pinned script](https://github.com/paterrx/brisa/blob/da5a68c72d8dac5afc4b897c1ec384abfc346063/scripts/install.ps1), then paste this block into PowerShell on Windows x64. It downloads that exact revision, checks its SHA-256, runs it in Windows PowerShell, and deletes the temporary script afterward. The pinned script still selects the latest published Brisa release.
 
 ```powershell
 $ErrorActionPreference = 'Stop'
 $p = Join-Path ([IO.Path]::GetTempPath()) ('Brisa-install-' + [guid]::NewGuid().ToString('N') + '.ps1')
 try {
-    Invoke-WebRequest 'https://raw.githubusercontent.com/paterrx/brisa/ab6a626bc8c9390b3361dc335a8508a24f3b1f23/scripts/install.ps1' -OutFile $p -UseBasicParsing -TimeoutSec 180
-    if ((Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash -ne '5dbb59c2a0c32c69217a4f7d3ff1e0f541f2a7361919b2c3e5c190fc6bf8c4af') { throw 'Brisa script checksum mismatch. Nothing was executed.' }
+    Invoke-WebRequest 'https://raw.githubusercontent.com/paterrx/brisa/da5a68c72d8dac5afc4b897c1ec384abfc346063/scripts/install.ps1' -OutFile $p -UseBasicParsing -TimeoutSec 180
+    if ((Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash -ne 'ce7bef79ce0d0a8986ad63df6d86be8c07e29fc1b69710c6843c57e9dfd7019b') { throw 'Brisa script checksum mismatch. Nothing was executed.' }
     & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p
     if ($LASTEXITCODE -ne 0) { throw "Brisa installer exited with code $LASTEXITCODE." }
 } finally { Remove-Item -LiteralPath $p -Force -ErrorAction SilentlyContinue }
