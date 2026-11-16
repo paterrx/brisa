@@ -12,13 +12,13 @@ Obrigado por querer ajudar. O Brisa é um projeto pequeno, mas mexe na rede e no
 
 O Brisa é um app nativo para Windows x64 (WPF, .NET 10) que manda só o Discord por um túnel WireGuard usando o WireSock. Ele é um fork do [GoLiveBypass](https://github.com/bezumiya/GoLiveBypass), de bezumiya.
 
-A branch principal é `brisa`, e ela só tem o app de Windows. Não aceitamos PRs que tragam de volta o app Electron, o plugin do Vencord/Equicord, o frontend web ou clientes de Linux. O port para macOS vive na branch [`macos`](https://github.com/insxnsive/brisa/tree/macos) e segue as próprias regras.
+A branch principal é `brisa`, e ela só tem o app de Windows. Não aceitamos PRs que tragam de volta o app Electron, o plugin do Vencord/Equicord, o frontend web ou clientes de Linux. O port para macOS vive na branch [`macos`](https://github.com/paterrx/brisa/tree/macos) e segue as próprias regras.
 
 Antes de começar algo grande (uma tela nova, outro provedor de VPN, uma mudança no jeito de conectar), abra uma issue e espere uma resposta. Um PR grande sem conversa antes provavelmente vai ser fechado, mesmo que o código esteja bom.
 
 ### Dúvidas e bugs
 
-O repositório não usa Discussions. Dúvidas, bugs e ideias vão nas [issues](https://github.com/insxnsive/brisa/issues). Procure antes, porque muita coisa já foi respondida. Uma issue por problema.
+O repositório não usa Discussions. Dúvidas, bugs e ideias vão nas [issues](https://github.com/paterrx/brisa/issues). Procure antes, porque muita coisa já foi respondida. Uma issue por problema.
 
 Para um bug, inclua:
 
@@ -39,7 +39,7 @@ Não abra uma issue pública para uma falha de segurança. Use a aba **Security*
 Você precisa de Windows x64, .NET 10 SDK, Node 22, Python 3.11 ou mais novo e Go 1.26.6 ou mais novo.
 
 ```powershell
-git clone https://github.com/insxnsive/brisa.git
+git clone https://github.com/paterrx/brisa.git
 cd brisa
 npm ci --prefix backend
 dotnet tool restore
@@ -136,13 +136,13 @@ Thanks for wanting to help. Brisa is a small project, but it changes the network
 
 Brisa is a native Windows x64 app (WPF, .NET 10) that sends only Discord through a WireGuard tunnel using WireSock. It's a fork of [GoLiveBypass](https://github.com/bezumiya/GoLiveBypass) by bezumiya.
 
-The main branch is `brisa`, and it holds only the Windows app. We don't accept PRs that bring back the Electron app, the Vencord/Equicord plugin, the web frontend or Linux clients. The macOS port lives on the [`macos`](https://github.com/insxnsive/brisa/tree/macos) branch and has its own rules.
+The main branch is `brisa`, and it holds only the Windows app. We don't accept PRs that bring back the Electron app, the Vencord/Equicord plugin, the web frontend or Linux clients. The macOS port lives on the [`macos`](https://github.com/paterrx/brisa/tree/macos) branch and has its own rules.
 
 Before starting something big (a new screen, another VPN provider, a change to how connecting works), open an issue and wait for an answer. A large PR with no prior discussion will probably be closed, even if the code is good.
 
 ### Questions and bugs
 
-The repository doesn't use Discussions. Questions, bugs and ideas go in [issues](https://github.com/insxnsive/brisa/issues). Search first; a lot has already been answered. One issue per problem.
+The repository doesn't use Discussions. Questions, bugs and ideas go in [issues](https://github.com/paterrx/brisa/issues). Search first; a lot has already been answered. One issue per problem.
 
 For a bug, include:
 
@@ -163,7 +163,7 @@ Don't open a public issue for a security problem. Use the repository's **Securit
 You need Windows x64, the .NET 10 SDK, Node 22, Python 3.11 or newer and Go 1.26.6 or newer.
 
 ```powershell
-git clone https://github.com/insxnsive/brisa.git
+git clone https://github.com/paterrx/brisa.git
 cd brisa
 npm ci --prefix backend
 dotnet tool restore

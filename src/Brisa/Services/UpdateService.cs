@@ -67,7 +67,7 @@ public static class AppVersion
 
 public sealed class VelopackUpdateClient : IUpdateClient
 {
-    public const string RepositoryUrl = "https://github.com/insxnsive/brisa";
+    public const string RepositoryUrl = "https://github.com/paterrx/brisa";
     public const string Channel = "win";
 
     private readonly UpdateManager _manager;

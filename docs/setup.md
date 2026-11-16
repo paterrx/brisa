@@ -13,7 +13,7 @@ You don't need the .NET SDK, Node or Go to use a release build.
 
 ## Installer
 
-Download `Brisa-win-Setup.exe` from [Brisa Releases](https://github.com/insxnsive/brisa/releases) and run it. It installs for your Windows account and adds a Start menu shortcut. Open that shortcut with **Run as administrator** to manage WireSock. You can browse the interface without elevation, but connection changes are blocked when ownership cannot be inspected reliably.
+Download `Brisa-win-Setup.exe` from [Brisa Releases](https://github.com/paterrx/brisa/releases) and run it. It installs for your Windows account and adds a Start menu shortcut. Open that shortcut with **Run as administrator** to manage WireSock. You can browse the interface without elevation, but connection changes are blocked when ownership cannot be inspected reliably.
 
 Brisa is not Authenticode-signed. Windows may show an unknown-publisher warning. Check that the download came from this repository; release checksums are in `SHA256SUMS`.
 

@@ -6,13 +6,13 @@
   <p><strong>Discord goes through WireGuard and you now have GoLive again.</strong></p>
 
   <p>
-    <a href="https://github.com/insxnsive/brisa/releases"><img src="https://img.shields.io/github/v/release/insxnsive/brisa?style=flat-square" alt="release"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/insxnsive/brisa?style=flat-square" alt="license"></a>
+    <a href="https://github.com/paterrx/brisa/releases"><img src="https://img.shields.io/github/v/release/paterrx/brisa?style=flat-square" alt="release"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/paterrx/brisa?style=flat-square" alt="license"></a>
     <a href="#requirements"><img src="https://img.shields.io/badge/platform-Windows%20x64-blue?style=flat-square" alt="platform"></a>
     <a href="docs/development.md"><img src="https://img.shields.io/badge/built%20with-.NET%2010-512BD4?style=flat-square" alt="built with"></a>
   </p>
 
-  [Download](https://github.com/insxnsive/brisa/releases) · [Install](#install) · [Features](#features) · [Usage](#usage) · [Requirements](#requirements) · [Docs](#docs) · [License](#license) · [Português (Brasil)](README.md)
+  [Download](https://github.com/paterrx/brisa/releases) · [Install](#install) · [Features](#features) · [Usage](#usage) · [Requirements](#requirements) · [Docs](#docs) · [License](#license) · [Português (Brasil)](README.md)
 </div>
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 ## Install
 
-Download **`Brisa-win-Setup.exe`** from the [Official Website](https://insxnsive.github.io/brisa/), or at the [Releases](https://github.com/insxnsive/brisa/releases) page.
+Download **`Brisa-win-Setup.exe`** from the [Releases](https://github.com/paterrx/brisa/releases) page.
 
 The Windows setup is not code-signed yet, so SmartScreen may warn about an unknown publisher. If the file came from this repository's Releases, choose **More info → Run anyway**.
 
@@ -33,7 +33,7 @@ Brisa installs per user without administrator rights; the WebView2 and WireSock 
 Prefer a script that checks the download first? In Windows PowerShell (not Command Prompt):
 
 ```powershell
-irm https://raw.githubusercontent.com/insxnsive/brisa/brisa/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/paterrx/brisa/brisa/scripts/install.ps1 | iex
 ```
 
 It verifies Microsoft's signature on WebView2 and the SHA-256 of the Brisa setup before running either. The pinned bootstrap, and what each check does and does not prove: [install checks](docs/install.md).
@@ -78,7 +78,7 @@ If WireSock is missing, Brisa opens the official installer on the first connecti
 
 ## Contributing
 
-Bugs and suggestions go to [Issues](https://github.com/insxnsive/brisa/issues). Never post passwords, verification codes, session files or VPN profiles there. The log from Advanced → Generate Log is safe to share: account names, paths and addresses are stripped before it is written.
+Bugs and suggestions go to [Issues](https://github.com/paterrx/brisa/issues). Never post passwords, verification codes, session files or VPN profiles there. The log from Advanced → Generate Log is safe to share: account names, paths and addresses are stripped before it is written.
 
 ## License
 

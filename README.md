@@ -7,14 +7,34 @@
   <p><strong>O Discord passa pelo WireGuard e você tem tela de novo.</strong></p>
   
   <p>
-    <a href="https://github.com/insxnsive/brisa/releases"><img src="https://img.shields.io/github/v/release/insxnsive/brisa?style=flat-square&label=vers%C3%A3o" alt="versão"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/insxnsive/brisa?style=flat-square&label=licen%C3%A7a" alt="licença"></a>
+    <a href="https://github.com/paterrx/brisa/releases"><img src="https://img.shields.io/github/v/release/paterrx/brisa?style=flat-square&label=vers%C3%A3o" alt="versão"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/paterrx/brisa?style=flat-square&label=licen%C3%A7a" alt="licença"></a>
     <a href="#requisitos"><img src="https://img.shields.io/badge/plataforma-Windows%20x64-blue?style=flat-square" alt="plataforma"></a>
     <a href="docs/development.md"><img src="https://img.shields.io/badge/feito%20com-.NET%2010-512BD4?style=flat-square" alt="feito com"></a>
   </p>
   
-  [Baixar](https://github.com/insxnsive/brisa/releases) · [Instalar](#instalar) · [Recursos](#recursos) · [Uso](#uso) · [Requisitos](#requisitos) · [Documentação](#documentação) · [Licença](#licença) · [English](README.en.md)
+  [Baixar](https://github.com/paterrx/brisa/releases) · [Instalar](#instalar) · [Recursos](#recursos) · [Uso](#uso) · [Requisitos](#requisitos) · [Documentação](#documentação) · [Licença](#licença) · [English](README.en.md)
 </div>
+
+## Comece aqui (2 minutos)
+
+Para quem nunca usou. Siga na ordem.
+
+<p align="center">
+  <a href="https://github.com/paterrx/brisa/releases/latest/download/Brisa-win-Setup.exe"><img src="https://img.shields.io/badge/%E2%AC%87%20Baixar%20o%20Brisa-Windows-2ea44f?style=for-the-badge" alt="Baixar o Brisa" height="48"></a>
+</p>
+
+<p align="center"><strong><a href="https://github.com/paterrx/brisa/releases/latest/download/Brisa-win-Setup.exe">Baixar o Brisa</a></strong></p>
+
+1. Crie uma conta grátis da Proton em <https://account.protonvpn.com/signup?plan=free>. Guarde o e-mail e a senha.
+2. Clique em **Baixar o Brisa** e abra o arquivo. Se aparecer a tela azul **"O Windows protegeu o computador"**, clique em **Mais informações** e depois em **Executar assim mesmo**. Esse aviso aparece porque o app é gratuito e não tem assinatura paga.
+3. Abra o menu Iniciar, procure **Brisa**, clique com o botão direito e escolha **Executar como administrador**.
+4. No Brisa, preencha **Usuário da Proton** e **Senha da Proton** e clique em **Entrar**. Se aparecer **Verifique sua conta**, conclua a verificação.
+5. Saia de qualquer chamada e clique em **Conectar**. Na primeira vez abre o instalador do WireSock: avance, aceite e clique em **Sim** nos avisos do Windows. O Discord fecha e abre sozinho. Pronto.
+
+**Para desligar:** clique em **Desconectar**. O X só esconde o app perto do relógio.<br>
+**Só o Discord passa pela VPN.** O resto do PC fica normal.<br>
+**Deu erro?** Me manda um print.
 
 <p align="center">
   <picture>
@@ -25,7 +45,7 @@
 
 ## Instalar
 
-Baixe o **`Brisa-win-Setup.exe`** no [Site Oficial](https://insxnsive.github.io/brisa/) ou em [Releases](https://github.com/insxnsive/brisa/releases).
+Baixe o **`Brisa-win-Setup.exe`** em [Releases](https://github.com/paterrx/brisa/releases).
 
 O instalador ainda não tem assinatura digital, então o SmartScreen pode avisar sobre editor desconhecido. Se o arquivo veio das Releases deste repositório, clique em **Mais informações → Executar assim mesmo**.
 
@@ -34,7 +54,7 @@ O Brisa se instala por usuário, sem precisar de administrador; os instaladores 
 Prefere um script que confere o download antes? No Windows PowerShell (não no Prompt de Comando):
 
 ```powershell
-irm https://raw.githubusercontent.com/insxnsive/brisa/brisa/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/paterrx/brisa/brisa/scripts/install.ps1 | iex
 ```
 
 Ele confere a assinatura da Microsoft no WebView2 e o SHA-256 do instalador do Brisa antes de rodar qualquer um dos dois. O script fixado em um commit, e o que cada verificação garante ou não: [verificações de instalação](docs/install.md).
@@ -79,7 +99,7 @@ Se o WireSock não estiver instalado, o Brisa abre o instalador oficial na prime
 
 ## Contribuir
 
-Bugs e sugestões vão nas [Issues](https://github.com/insxnsive/brisa/issues). Nunca publique senhas, códigos de verificação, arquivos de sessão ou perfis de VPN. O log gerado em Avançado → Gerar log pode ser compartilhado: nomes de conta, caminhos e endereços são removidos antes de o log ser escrito.
+Bugs e sugestões vão nas [Issues](https://github.com/paterrx/brisa/issues). Nunca publique senhas, códigos de verificação, arquivos de sessão ou perfis de VPN. O log gerado em Avançado → Gerar log pode ser compartilhado: nomes de conta, caminhos e endereços são removidos antes de o log ser escrito.
 
 ## Licença
 

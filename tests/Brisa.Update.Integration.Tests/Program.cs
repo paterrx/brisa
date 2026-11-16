@@ -9,7 +9,7 @@ var cache = Path.GetFullPath(args[3]);
 Directory.CreateDirectory(cache);
 var locator = new TestVelopackLocator("Brisa", args[1], cache);
 IUpdateSource feed = source == "github"
-    ? new GithubSource("https://github.com/insxnsive/brisa", accessToken: null, prerelease: true)
+    ? new GithubSource("https://github.com/paterrx/brisa", accessToken: null, prerelease: true)
     : new SimpleFileSource(new DirectoryInfo(Path.GetFullPath(source)));
 var options = new UpdateOptions { ExplicitChannel = "win", AllowVersionDowngrade = false };
 var manager = new UpdateManager(feed, options, locator);

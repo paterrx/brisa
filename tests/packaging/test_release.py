@@ -98,7 +98,7 @@ class ReleaseTests(unittest.TestCase):
             release = {'id': 7, 'tag_name': 'v0.1.0-beta.2', 'prerelease': True, 'draft': True,
                 'html_url': 'https://example.invalid/draft', 'assets': [{'name': 'asset.zip', 'size': 7,
                 'digest': 'sha256:'+hashlib.sha256(b'fixture').hexdigest()}]}
-            base = 'repos/insxnsive/brisa/releases'
+            base = 'repos/paterrx/brisa/releases'
             def fake_gh(*args):
                 if args == ('api', base+'?per_page=100'): return json.dumps([release])
                 if args == ('api', base+'/7'): return json.dumps(release)
@@ -125,7 +125,7 @@ class ReleaseTests(unittest.TestCase):
             package = root/f'Brisa-{version}-full.nupkg'
             with zipfile.ZipFile(package, 'w') as archive:
                 archive.writestr('lib/app/source.zip', source_data.getvalue())
-                archive.writestr('lib/app/build-info.json', json.dumps({'version': version, 'repository': 'https://github.com/insxnsive/brisa'}))
+                archive.writestr('lib/app/build-info.json', json.dumps({'version': version, 'repository': 'https://github.com/paterrx/brisa'}))
                 archive.writestr('lib/app/manifest.sha256.json', json.dumps({'Brisa.pdb': {'bytes': 1, 'sha256': '0'*64}}))
             data = package.read_bytes()
             (root/'releases.win.json').write_text(json.dumps({'Assets': [{'PackageId': 'Brisa', 'Version': version,

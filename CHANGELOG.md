@@ -1,5 +1,9 @@
 # Changes
 
+## 1.0.3
+
+- Build próprio: atualizações passam a vir de paterrx/brisa.
+
 ## 1.0.2
 
 - Startup works on PCs where the Windows account name has an accented character. Those machines showed "the native service stopped" before the first status and could not generate a log at all.

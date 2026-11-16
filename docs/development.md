@@ -3,7 +3,7 @@
 Use Windows x64 with the .NET 10 SDK, Node 22, Python 3.11+ and Go 1.26.6+. Go can download the toolchain specified in `go.mod` when automatic toolchain selection is enabled.
 
 ```powershell
-git clone https://github.com/insxnsive/brisa.git
+git clone https://github.com/paterrx/brisa.git
 cd brisa
 npm ci --prefix backend
 dotnet tool restore

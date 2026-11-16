@@ -61,7 +61,7 @@ try {
         'User-Agent' = 'Brisa-Quick-Install'
         'X-GitHub-Api-Version' = '2022-11-28'
     }
-    $releases = Invoke-RestMethod -Uri 'https://api.github.com/repos/insxnsive/brisa/releases?per_page=30' -Headers $headers -TimeoutSec 30
+    $releases = Invoke-RestMethod -Uri 'https://api.github.com/repos/paterrx/brisa/releases?per_page=30' -Headers $headers -TimeoutSec 30
     $release = $null
     foreach ($candidate in $releases) {
         if ($candidate.draft) { continue }
@@ -79,7 +79,7 @@ try {
     if ($release.tag_name -notmatch '^v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-(alpha|beta|rc)\.(0|[1-9]\d*))?$') {
         throw 'The Brisa release tag is not a supported version.'
     }
-    $expectedUrl = 'https://github.com/insxnsive/brisa/releases/download/' + $release.tag_name + '/Brisa-win-Setup.exe'
+    $expectedUrl = 'https://github.com/paterrx/brisa/releases/download/' + $release.tag_name + '/Brisa-win-Setup.exe'
     if (-not [string]::Equals($setupAsset.browser_download_url, $expectedUrl, [StringComparison]::Ordinal)) {
         throw 'The installer URL does not match the selected Brisa release.'
     }

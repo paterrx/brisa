@@ -48,7 +48,7 @@ class QuickInstallTests(unittest.TestCase):
             self.assertIn('```powershell', readme, name)
 
     def test_readme_bootstraps_use_the_short_one_liner_and_link_the_pinned_guide(self):
-        snippet = 'irm https://raw.githubusercontent.com/insxnsive/brisa/brisa/scripts/install.ps1 | iex'
+        snippet = 'irm https://raw.githubusercontent.com/paterrx/brisa/brisa/scripts/install.ps1 | iex'
         guide = (ROOT / 'docs/install.md').read_text(encoding='utf-8')
         # O aviso de que o comando não é para o Prompt de Comando: cada idioma diz isso com as
         # suas próprias palavras, então o padrão acompanha a página.
@@ -66,7 +66,7 @@ class QuickInstallTests(unittest.TestCase):
         pinned_blocks = re.findall(r'```powershell\n(.*?)\n```', guide, re.DOTALL)
         self.assertEqual(len(pinned_blocks), 1)
         pinned = pinned_blocks[0]
-        pinned_url = r'https://raw[.]githubusercontent[.]com/insxnsive/brisa/[0-9a-f]{40}/scripts/install[.]ps1'
+        pinned_url = r'https://raw[.]githubusercontent[.]com/paterrx/brisa/[0-9a-f]{40}/scripts/install[.]ps1'
         self.assertRegex(pinned, pinned_url)
         for name in ('README.md', 'README.en.md'):
             readme = (ROOT / name).read_text(encoding='utf-8')
@@ -89,7 +89,7 @@ class QuickInstallTests(unittest.TestCase):
         shells = [path for name in ('powershell', 'pwsh') if (path := shutil.which(name))]
         if not shells:
             self.skipTest('PowerShell is needed for the one-line fixture')
-        snippet = 'irm https://raw.githubusercontent.com/insxnsive/brisa/brisa/scripts/install.ps1 | iex'
+        snippet = 'irm https://raw.githubusercontent.com/paterrx/brisa/brisa/scripts/install.ps1 | iex'
         for shell in shells:
             for scenario in ('present', 'webview-absent', 'hash-mismatch', 'webview-bad-signature', 'bootstrap-download-failed', 'download-failed', 'setup-cancel'):
                 with self.subTest(shell=shell, scenario=scenario):
@@ -111,7 +111,7 @@ class QuickInstallTests(unittest.TestCase):
         blocks = re.findall(r'```powershell\n(.*?)\n```', guide, re.DOTALL)
         self.assertEqual(len(blocks), 1)
         snippet = blocks[0]
-        self.assertRegex(snippet, r'https://raw[.]githubusercontent[.]com/insxnsive/brisa/[0-9a-f]{40}/scripts/install[.]ps1')
+        self.assertRegex(snippet, r'https://raw[.]githubusercontent[.]com/paterrx/brisa/[0-9a-f]{40}/scripts/install[.]ps1')
         self.assertIn(hashlib.sha256((ROOT / 'scripts/install.ps1').read_bytes()).hexdigest(), snippet)
         self.assertLess(snippet.index('Get-FileHash'), snippet.index('& powershell.exe'))
         self.assertNotRegex(snippet, r'(?i)\biex\b|Invoke-Expression')
@@ -167,7 +167,7 @@ class QuickInstallTests(unittest.TestCase):
 
     def test_installer_uses_official_release_digest_and_visible_installers(self):
         script = (ROOT / 'scripts' / 'install.ps1').read_text(encoding='utf-8')
-        self.assertIn('api.github.com/repos/insxnsive/brisa/releases', script)
+        self.assertIn('api.github.com/repos/paterrx/brisa/releases', script)
         self.assertIn('Brisa-win-Setup.exe', script)
         self.assertIn('Get-FileHash', script)
         self.assertIn('Get-AuthenticodeSignature', script)

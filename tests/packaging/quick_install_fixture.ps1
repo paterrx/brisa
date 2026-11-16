@@ -24,13 +24,13 @@ function Invoke-WebRequest {
 }
 function Invoke-RestMethod {
     param($Uri, $Headers, $TimeoutSec)
-    if ($Uri -eq 'https://raw.githubusercontent.com/insxnsive/brisa/brisa/scripts/install.ps1' -and $BootstrapPath) {
+    if ($Uri -eq 'https://raw.githubusercontent.com/paterrx/brisa/brisa/scripts/install.ps1' -and $BootstrapPath) {
         $global:bootstraps++
         if ($Scenario -eq 'bootstrap-download-failed') { throw 'Fixture bootstrap download failed' }
         return [IO.File]::ReadAllText($ScriptPath)
     }
-    if ($Uri -ne 'https://api.github.com/repos/insxnsive/brisa/releases?per_page=30') { throw 'Unexpected fixture URL' }
-    $url = 'https://github.com/insxnsive/brisa/releases/download/v0.1.0-beta.4/Brisa-win-Setup.exe'
+    if ($Uri -ne 'https://api.github.com/repos/paterrx/brisa/releases?per_page=30') { throw 'Unexpected fixture URL' }
+    $url = 'https://github.com/paterrx/brisa/releases/download/v0.1.0-beta.4/Brisa-win-Setup.exe'
     if ($Scenario -eq 'foreign-url') { $url = 'https://example.invalid/Brisa-win-Setup.exe' }
     if ($Scenario -eq 'wrong-tag-url') { $url = $url.Replace('v0.1.0-beta.4', 'v0.0.1') }
     if ($Scenario -eq 'query-url') { $url += '?other=asset' }

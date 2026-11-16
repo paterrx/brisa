@@ -64,8 +64,8 @@ public partial class AdvancedView : UserControl, IAsyncDisposable
     private void Source_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
     {
         e.Handled = true;
-        try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://github.com/insxnsive/brisa") { UseShellExecute = true }); }
-        catch { UpdateStatusText.Text = "Open github.com/insxnsive/brisa for source and license information."; }
+        try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://github.com/paterrx/brisa") { UseShellExecute = true }); }
+        catch { UpdateStatusText.Text = "Open github.com/paterrx/brisa for source and license information."; }
     }
 
     private async void CheckUpdate_Click(object sender, RoutedEventArgs e)

@@ -43,7 +43,7 @@
             <StackPanel Margin="0,8,0,0">
               <TextBlock Style="{StaticResource SecondaryText}" FontSize="12" TextWrapping="Wrap" Text="GPL-3.0-or-later. No warranty. Redistribution is allowed under the included LICENSE."/>
               <TextBlock Style="{StaticResource SecondaryText}" FontSize="12" TextWrapping="Wrap" Margin="0,4,0,0">
-                Forked from GoLiveBypass by bezumiya and contributors. <Hyperlink NavigateUri="https://github.com/insxnsive/brisa" RequestNavigate="Source_RequestNavigate">Source and license</Hyperlink>
+                Forked from GoLiveBypass by bezumiya and contributors. <Hyperlink NavigateUri="https://github.com/paterrx/brisa" RequestNavigate="Source_RequestNavigate">Source and license</Hyperlink>
               </TextBlock>
             </StackPanel>
           </Expander>

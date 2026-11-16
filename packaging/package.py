@@ -221,7 +221,7 @@ def package(skip_build=False, output=None, version=None, allow_dirty=False):
         copy(p, dest / 'docs' / p.name)
     commit = source_commit()
     build_info = {'product': 'Brisa', 'version': version, 'sourceCommit': commit,
-                  'repository': 'https://github.com/insxnsive/brisa', 'license': 'GPL-3.0-or-later', 'dirty': dirty}
+                  'repository': 'https://github.com/paterrx/brisa', 'license': 'GPL-3.0-or-later', 'dirty': dirty}
     make_source_archive(dest / 'source.zip', vendor, build_info)
     (dest / 'build-info.json').write_text(json.dumps(build_info, indent=2), encoding='utf-8')
     validate_publish(dest)

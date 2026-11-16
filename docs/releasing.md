@@ -1,6 +1,6 @@
 # Release a version
 
-Updates come from `insxnsive/brisa` GitHub Releases, on Velopack's `win` channel. Do not point a build at upstream GoLiveBypass releases.
+Updates come from `paterrx/brisa` GitHub Releases, on Velopack's `win` channel. Do not point a build at upstream GoLiveBypass releases.
 
 ## Development is not publication
 
